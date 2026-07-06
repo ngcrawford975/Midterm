@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Calculator</title>
+</head>
+<body>
+    <!-- make sure the users know what were doing here-->
+    <h1>Study Calculator</h1>
+
+    <!-- right here, ill add a label and give the user a place to input how many chapters they want to study-->
+     <!-- im adding two breaks right here just to give a little extra space-->
+      <!-- below that, ill let the code know that when i reference 'chapters' later, this is what im referring to-->
+    <label>Number of Chapters to Study:</label>
+    <input id="chapters" type="number"><br><br>
+
+    <!-- this next part is where the user will choose a difficulty level based on how hard they think the chapters will be-->
+     <!-- for this one, ill do a dropdown giving them the choice of easy, medium, or hard. just a different input-->
+      <!-- we'll start this out with another label and add some spacing in here too-->
+       <label>Difficulty Level:</label>
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select><br><br>
+
+    <!--this next part is where we'll calculate some break times in studying-->
+    <!-- its important to take breaks, but everyone likes to break up their study sessions differently-->
+     <!-- this box will let the users tell us how often theyd like to rest or take a break-->
+    <label>How often would you like a break? (minutes):</label>
+    <input id="breakTime" type="number"><br><br>
+
+    <!--here, im just adding in our buttons. we'll have three total buttons for this web page-->
+    <!-- the first button will calculate the total amount of time this study session should take-->
+     <!-- our start button will begin a timer that will just keep the toal elapsed time until the user presses the stop button-->
+      <!-- the stop button will simply freeze the timer that the strat button began-->
+    <button id="calculateButton">Calculate Total Study Time</button>
+    <button id="startButton">Start Timer</button>
+    <button id="stopButton">Stop Timer</button><br><br>
+
+    <!-- here im going to add a box for the results to be displayed -->
+     <!-- this box will start out empty and our .js file will fill it with the calculated study time later-->
+    <h1>Results:</h1>
+    <div id="result"></div>
+
+    <!-- this is where the timer will be displayed -->
+    <!-- it will start at 0 seconds and then begin counting when the start button is pressed-->
+    <h1>Timer:</h1>
+    <div id="timeCounter">0 seconds</div>
+    <script src="main.js"></script>
+
+</body>
+</html>
